@@ -46,5 +46,14 @@ nav ul li{
     transition: 0.5s;
 }
 
+/* media query */
+@media (max-width: 1000px){
+    .logo{
+        width: 140px;
+    }
+    nav ul li{
+        margin: 10px 15px;
+    }
+}
 
 
