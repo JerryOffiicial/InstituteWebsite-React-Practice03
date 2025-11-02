@@ -1,6 +1,10 @@
 import React from "react";
 import "./Contact.css";
 import msg_icon from '../../assets/msg-icon.png'
+import mail_icon from '../../assets/mail-icon.png'
+import phone_icon from '../../assets/phone-icon.png'
+import location_icon from '../../assets/location-icon.png'
+import white_arrow from '../../assets/white-arrow.png'
 
 function Contact() {
   return (
@@ -12,12 +16,22 @@ function Contact() {
           university website in React JS step by step tutorial.
         </p>
         <ul>
-            <li>Contact@gmail.com</li>
-            <li>+94 6875988</li>
-            <li>330/6 mmdaw kadwkdm, kkdkdk <br />MA 02139, United States</li>
+            <li><img src={mail_icon} alt="" />Contact@gmail.com</li>
+            <li><img src={phone_icon} alt="" />+94 6875988</li>
+            <li><img src={location_icon} alt="" />330/6 mmdaw kadwkdm, kkdkdk <br />MA 02139, United States</li>
         </ul>
       </div>
-      <div className="contact-col"></div>
+      <div className="contact-col">
+        <form>
+          <label>Your name</label>
+          <input type="text" name="name" placeholder="Enter your name"  required/>
+          <label>Phone Number</label>
+          <input type="tel" name="phone" placeholder="Enter your mobile" required />
+          <label>Write your messages here</label>
+          <textarea name="message" rows="6" placeholder="Enter your message"required></textarea>
+          <button type="submit" className="btn dark-btn">Submit now <img src={white_arrow} alt="" /></button>
+        </form>
+      </div>
     </div>
   );
 }
